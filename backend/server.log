@@ -1,0 +1,23 @@
+Server is running smoothly on port 5001
+MongoDB Connection Successful!
+Seeding reports into MongoDB...
+Doctors already exist in DB. Skipping seed.
+Reports seeded successfully.
+Error sending email: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-36956f2707bsm1448467a91.1 - gsmtp
+    at SMTPConnection._formatError (/Users/apple/Desktop/docease copy/backend/node_modules/nodemailer/lib/smtp-connection/index.js:887:19)
+    at SMTPConnection._actionAUTHComplete (/Users/apple/Desktop/docease copy/backend/node_modules/nodemailer/lib/smtp-connection/index.js:1695:34)
+    at SMTPConnection.<anonymous> (/Users/apple/Desktop/docease copy/backend/node_modules/nodemailer/lib/smtp-connection/index.js:626:26)
+    at SMTPConnection._processResponse (/Users/apple/Desktop/docease copy/backend/node_modules/nodemailer/lib/smtp-connection/index.js:1072:20)
+    at SMTPConnection._onData (/Users/apple/Desktop/docease copy/backend/node_modules/nodemailer/lib/smtp-connection/index.js:847:14)
+    at SMTPConnection._onSocketData (/Users/apple/Desktop/docease copy/backend/node_modules/nodemailer/lib/smtp-connection/index.js:217:44)
+    at TLSSocket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+    at Readable.push (node:internal/streams/readable:394:5) {
+  code: 'EAUTH',
+  response: '535-5.7.8 Username and Password not accepted. For more information, go to\n' +
+    '535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-36956f2707bsm1448467a91.1 - gsmtp',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
