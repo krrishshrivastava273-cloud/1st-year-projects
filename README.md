@@ -1,70 +1,237 @@
-# Getting Started with Create React App
+Docease – MERN Hospital Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack Hospital Management System developed using the MERN Stack that streamlines communication between doctors and patients through secure authentication, appointment management, medical report handling, OTP verification, PDF downloads, and real-time dashboard synchronization.
 
-## Available Scripts
+⸻
 
-In the project directory, you can run:
+🚀 Features
 
-### `npm start`
+Authentication & Security
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* User Signup & Login
+* Secure Forgot Password System
+* Gmail OTP Verification
+* Password Reset Functionality
+* Environment Variable Security using .env
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+⸻
 
-### `npm test`
+Patient Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Book Appointments
+* Reschedule Appointments
+* Cancel Appointments
+* View Medical Reports
+* Download Reports as PDF
+* Dynamic Patient Dashboard
 
-### `npm run build`
+⸻
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Doctor Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* View Patient Appointments
+* Receive Email Notifications for Appointments
+* Manage Patients
+* Add Medical Reports
+* Dynamic Doctor Dashboard
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+⸻
 
-### `npm run eject`
+Dashboard Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Sticky Navbar
+* Smooth Section Navigation
+* Responsive UI
+* Real-Time Data Synchronization
+* Dynamic MongoDB Data Fetching
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+⸻
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Report System
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Doctor Medical Report Generation
+* PDF Report Download using PDFKit
+* MongoDB Report Storage
 
-## Learn More
+⸻
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🛠️ Tech Stack
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Frontend
 
-### Code Splitting
+* React.js
+* JavaScript
+* CSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Backend
 
-### Analyzing the Bundle Size
+* Node.js
+* Express.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Database
 
-### Making a Progressive Web App
+* MongoDB
+* MongoDB Compass
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Authentication & Services
 
-### Advanced Configuration
+* Nodemailer
+* Gmail SMTP
+* dotenv
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+PDF Generation
 
-### Deployment
+* PDFKit
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+⸻
 
-### `npm run build` fails to minify
+🏗️ Project Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React Frontend
+       ↓
+REST APIs
+       ↓
+Express.js Backend
+       ↓
+Middleware Layer
+       ↓
+MongoDB Database
+       ↓
+Email & PDF Services
+
+⸻
+
+🔥 Main APIs Used
+
+Authentication APIs
+
+* POST /signup
+* POST /login
+* POST /forgot-password
+* POST /verify-otp
+* POST /reset-password
+
+⸻
+
+Appointment APIs
+
+* POST /book-appointment
+* GET /appointments/:email
+* GET /doctor-appointments/:name
+* PUT /reschedule-appointment/:id
+* DELETE /appointments/:id
+
+⸻
+
+Medical Report APIs
+
+* POST /add-report
+* GET /reports/:email
+* GET /download-report/:id
+
+⸻
+
+⚡ CRUD Operations
+
+Operation	Usage
+Create	Book appointments, add reports
+Read	Fetch reports & appointments
+Update	Reschedule appointments, reset password
+Delete	Cancel appointments
+
+⸻
+
+📧 Advanced Features / USP
+
+* Gmail OTP Authentication
+* Doctor Email Notifications
+* PDF Medical Report Downloads
+* Real-Time Dashboard Updates
+* Dynamic MongoDB Synchronization
+* Role-Based Access Control
+* Production-Oriented MERN Architecture
+* Runtime-Safe React Rendering
+
+⸻
+
+🔐 Middleware Used
+
+app.use(express.json())
+app.use(cors())
+dotenv.config()
+
+⸻
+
+📂 MongoDB Collections
+
+* users
+* doctors
+* patients
+* appointments
+* reports
+
+⸻
+
+▶️ Run Locally
+
+Clone Repository
+
+git clone YOUR_GITHUB_REPO_LINK
+
+⸻
+
+Install Frontend Dependencies
+
+npm install
+
+⸻
+
+Install Backend Dependencies
+
+cd backend
+npm install
+
+⸻
+
+Start Frontend
+
+npm start
+
+⸻
+
+Start Backend
+
+cd backend
+node server.js
+
+⸻
+
+🌐 Environment Variables
+
+Create a .env file inside backend folder:
+
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_gmail_app_password
+
+⸻
+
+📌 Future Enhancements
+
+* JWT Authentication
+* Video Consultation
+* Online Payments
+* AI-based Health Suggestions
+* Cloud Deployment
+* Admin Dashboard
+
+
+
+👨‍💻 Developed By
+
+Krrish Shrivastava
+
+⸻
+
+📜 License
+
+This project is developed for educational and academic purposes.
